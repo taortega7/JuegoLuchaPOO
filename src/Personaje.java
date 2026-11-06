@@ -8,10 +8,10 @@ public abstract class Personaje {
 
     public Personaje(String nombre) {
         this.nombre = nombre;
-        this.puntosDeVida = 100; // Todos empiezan con 100 HP[cite: 2]
+        this.puntosDeVida = 100; // Todos empiezan con 100 HP
     }
 
-    // Método de ataque requerido[cite: 1]
+    // Método de ataque requerido
     public void atacar(Personaje oponente) {
         Random rand = new Random();
         int dano = rand.nextInt((MAX_DANO - MIN_DANO) + 1) + MIN_DANO;
@@ -26,7 +26,7 @@ public abstract class Personaje {
         }
     }
 
-    // Métodos obligatorios pedidos por el profesor[cite: 1]
+    // Métodos obligatorios pedidos por el profesor
     public boolean estaVivo() {
         return this.puntosDeVida > 0;
     }
